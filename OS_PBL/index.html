@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure File Encryptor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🔐 AES File Encryptor & Decryptor</h1>
+  <p class="subtitle">Encrypt or Decrypt any file securely with a single click</p>
+
+  <div class="container">
+    <div class="card">
+      <h2>Encryption</h2>
+      <p>Select a file to encrypt:</p>
+      <input type="file" id="encryptFile" />
+      <button class="encrypt" onclick="encryptFile()">Encrypt File</button>
+      <button class="getkey" onclick="generateKey()">Get Key</button>
+      <textarea id="encryptionKey" placeholder="Your AES Key" readonly></textarea>
+    </div>
+
+    <div class="card">
+      <h2>Decryption</h2>
+      <p>Select an encrypted file and enter the key:</p>
+      <input type="file" id="decryptFile" />
+      <input type="text" id="decryptionKey" placeholder="Enter AES Key" />
+      <button class="decrypt" onclick="decryptFile()">Decrypt File</button>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>🛡️ Trust:</strong> Your files are never stored or misused.</p>
+    <p>🔄 Files are immediately deleted after processing.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
